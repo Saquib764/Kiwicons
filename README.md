@@ -1,5 +1,8 @@
 rum
 ===
+<b>Introduction</b><br />
+It is a small plugin that simplies the use of svg as icons. Simply create a svg tag and give name of icon, rest all is taken care of by <i>rum</i>.<br />
+
 <b>Instructions : </b><br />
 <ul>
   <li>Include content of <b>'icons.xml'</b> into your index file.</li>
