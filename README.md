@@ -10,6 +10,9 @@ rum
 <i>&lt;svg class="rum rum-hover-raise-up" data-id='epicons-pencil' &gt;&lt;/svg&gt;</i>
 
 <b>Explanation</b><br />
-Class <i>rum</i> initiates the plugin. <i>data-id</i> contained name(id) of the icon.<br />
-class <i>rum-hover-raise-up</i> defines action on mouse over. There are other actions which are still undocumented.<br />
-On changing data-id dynamically, naturally icon also changes.
+<ul>
+<li>Class <i>rum</i> initiates the plugin. <i>data-id</i> contained name(id) of the icon.</li>
+<li>class <i>rum-hover-raise-up</i> defines action on mouse over. There are other actions which are still undocumented.</li>
+<li>On changing data-id dynamically, naturally icon also changes.</li>
+</ul>
+<b>Demo : </b> http://home.iitb.ac.in/~saquib/rum/
