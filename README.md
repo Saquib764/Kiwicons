@@ -1,7 +1,7 @@
 rum
 ===
 <b>Introduction</b><br />
-It is a small plugin that simplies the use of svg as icons. Simply create a svg tag and give name of icon, rest all is taken care of by <i>rum</i>.<br />
+It is a small plugin that simplies the use of svg as icons. Simply create a svg tag and give name of icon in <i>data-id</i>, rest all is taken care of by <i>rum</i>. Quick and simple. No knowledge of svg required.<br />
 
 <b>Instructions : </b><br />
 <ul>
