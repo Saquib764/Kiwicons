@@ -7,7 +7,7 @@
 
 
   var defaults={
-    rumIcon: "epicons-fail",
+    fail : "epicons-fail",
     fill: null,
   },populaterumIcon,setting;
   var rum = ['epicons']
@@ -17,24 +17,26 @@
       init: function(){
         var fn = this;
         fn._getSetting();
-        fn._changerumIcon(setting.rumIcon);
+        fn._invalidIcon();
+        //fn._changerumIcon(setting.rumIcon);
 
-        fn._createEvent();
-        fn._bindEvents();
+        //fn._createEvent();
+        //fn._bindEvents();
+      },
+      _invalidIcon: function(){
+        rumIcon = element.childNodes[0].getAttribute('xlink:href').substring(1);
+        if(!$('#'+rumIcon).length){
+          console.log("No rumIcon found. Check data-id");
+          element.childNodes[0].setAttribute('xlink:href', '#'+ setting.fail);
+        }
       },
       _getSetting: function(){
         setting = $.extend({}, defaults);
 
-        rumIcon = $(element).data('id');
 
-        if($('#'+rumIcon).length)
-          setting.rumIcon = rumIcon;
-        else
-          console.log("No rumIcon found. Check data-id");
       },
-      _changerumIcon: function(rumIcon){
-        html = '<use xlink:href="#'+rumIcon+'" />';
-        $(element).html(html);
+      _changerumIcon: function(rumIcon){  
+        element.childNodes[0].setAttribute('xlink:href', '#'+rumIcon);
       },
       _bindEvents: function(){
         var fn = this;
