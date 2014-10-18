@@ -1,0 +1,32 @@
+	@clock: hover-spin-clock;
+	@anticlock: hover-spin-anticlock;
+	@rotation-step: 5deg;
+
+	.normalise-spin(@class,@dir){
+		svg[class*='@{class}']:hover,
+		[class*='@{class}']:hover svg{
+			.rotate(@rotation-step*@dir);
+		}
+		svg[class*='@{class}-2']:hover,
+		[class*='@{class}-2']:hover svg{
+			.rotate(@rotation-step*@dir*2);
+		}
+		svg[class*='@{class}-3']:hover,
+		[class*='@{class}-3']:hover svg{
+			.rotate(@rotation-step*@dir*3);
+		}
+		svg[class*='@{class}-45']:hover,
+		[class*='@{class}-45']:hover svg{
+			.rotate(45deg*@dir);
+		}
+		svg[class*='@{class}-90']:hover,
+		[class*='@{class}-90']:hover svg{
+			.rotate(90deg*@dir);
+		}
+		svg[class*='@{class}-180']:hover,
+		[class*='@{class}-180']:hover svg{
+			.rotate(180deg*@dir);
+		}
+	}
+	.normalise-spin(@clock, 1);
+	.normalise-spin(@anticlock, -1);

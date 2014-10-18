@@ -1,0 +1,36 @@
+  @scale-step: @size-step;
+  @raise-step: 10%;
+  .normalise-raise(@direction){
+    svg.rum-xlg{ .raise(-@raise-step*@direction, @scale-step*2); }
+    svg.rum-lg{ .raise(-@raise-step*@direction, @scale-step*1); }
+    svg{ .raise(-@raise-step*@direction); }
+    svg.rum-sm{ .raise(-@raise-step*@direction, -@scale-step*1); }
+    svg.rum-xsm{ .raise(-@raise-step*@direction, -@scale-step*2); }
+  }
+  [class*='hover-raise-up']:hover{
+    .normalise-raise(1);
+  }
+  [class*='hover-raise-down']:hover{
+    .normalise-raise(-1);
+  }
+
+  .extend-raise(@dir){
+    svg[class*='@{dir}'].rum-xlg:hover{
+      &:extend([class*='@{dir}']:hover svg.rum-xlg);
+    }
+    svg[class*='@{dir}'].rum-lg:hover{
+      &:extend([class*='@{dir}']:hover svg.rum-lg);
+    }
+    svg[class*='@{dir}']:hover{
+      &:extend([class*='@{dir}']:hover svg);
+    }
+    svg[class*='@{dir}'].rum-sm:hover{
+      &:extend([class*='@{dir}']:hover svg.rum-sm);
+    }
+    svg[class*='@{dir}'].rum-xsm:hover{
+      &:extend([class*='@{dir}']:hover svg.rum-xsm);
+    }
+  }
+
+  .extend-raise(hover-raise-up);
+  .extend-raise(hover-raise-down);

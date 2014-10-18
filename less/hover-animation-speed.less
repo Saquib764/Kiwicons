@@ -1,0 +1,16 @@
+  [class*='-fast'] svg,
+  svg[class*='-fast']{
+    transition-duration: 0.1s !important;
+  }
+  [class*='-slow'] svg,
+  svg[class*='-slow']{
+    transition-duration: 0.2s !important;
+  }
+  [class*='hover'] svg,
+  svg[class*='rum-hover']{
+    transition: all ease-in-out 0s;
+  }
+  [class*='hover']:hover,
+  svg[class*='rum-hover']:hover{
+    cursor: pointer;
+  }

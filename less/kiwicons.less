@@ -1,0 +1,70 @@
+@import 'variables';
+@import 'mixins';
+@import 'default';
+@import 'size';
+@import 'hover-animation-speed';
+@import 'hover-scale';
+@import 'hover-raise';
+@import 'hover-spin';
+
+  svg.rum-shadow use{
+    box-shadow: 2px 2px;
+    background-color: black;
+  }
+
+       
+
+
+
+  .rum-stroke>use{
+    fill: none !important;
+    stroke: currentColor;
+    stroke-width: 1;
+  }
+  svg[class*='border'],svg[class*='-box']:hover{
+    border-style: solid;
+    width: 0.75em;
+    height: 0.75em;
+    border-width: 0.05em;
+  }
+  svg[class*='border-dashed'],svg[class*='-box-dashed']:hover{
+    border-style: dashed;
+  }
+  svg[class*='border-dotted'],svg[class*='-box-dotted']:hover{
+    border-style: dotted;
+  }
+  svg[class*='-rounded'],svg[class*='-rounded']:hover{
+    border-radius: 5px;
+  }
+  svg[class*='-L'], svg[class*='-L']:hover{
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px; 
+    border-left-style: none;
+  }
+  svg[class*='-R'], svg[class*='-L']:hover{
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px; 
+    border-right-style: none;
+  }
+  svg[class*='-T'], svg[class*='-L']:hover{
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px; 
+    border-top-style: none;
+  }
+  svg[class*='-B'], svg[class*='-L']:hover{
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px; 
+    border-bottom-style: none;
+  }
+  svg[class*='underline']{
+    top: -2px;
+    border: none;
+    border-bottom: solid 2px;
+  }
+  svg[class*='underline-dotted']{
+    border-bottom-style: dotted;
+  }
+  svg[class*='underline-dashed']{
+    border-bottom-style: dashed;
+  }
+

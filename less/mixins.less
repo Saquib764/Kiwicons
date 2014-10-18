@@ -1,0 +1,35 @@
+.normalise(@property, @value){
+	-ms-@{property}: @value;
+	-webkit-@{property}: @value;
+	-moz-@{property}: @value;
+	-o-@{property}: @value;
+	@{property}: @value;
+}
+.transform-origin(@x:center, @y:center){
+	-ms-transform-origin: @x @y;
+	-webkit-transform-origin: @x @y;
+	-moz-transform-origin: @x @y;
+	-o-transform-origin: @x @y;
+	transform-origin: @x @y;
+}
+.raise(@y, @s:0){
+	-ms-transform: translateY(@y) scale(1+@s, 1+@s);
+	-webkit-transform: translateY(@y) scale(1+@s, 1+@s);
+	-moz-transform: translateY(@y) scale(1+@s, 1+@s);
+	-o-transform: translateY(@y) scale(1+@s, 1+@s);
+	transform: translateY(@y) scale(1+@s, 1+@s);
+}
+.scale(@s){
+	-ms-transform: scale(1+@s,1+@s);
+	-webkit-transform: scale(1+@s,1+@s);
+	-moz-transform: scale(1+@s,1+@s);
+	-o-transform: scale(1+@s,1+@s);
+	transform: scale(1+@s,1+@s);
+}
+.rotate(@deg){
+	-ms-transform: rotate(@deg);
+	-webkit-transform: rotate(@deg);
+	-moz-transform: rotate(@deg);
+	-o-transform: rotate(@deg);
+	transform: rotate(@deg);
+}

@@ -1,0 +1,38 @@
+  /* Hover Scale */
+  @down: hover-scale-down;
+  @up: hover-scale-up;
+
+  [class*='@{down}']:hover svg[class*='rum-xsm'],
+  svg[class*='@{down}'][class*='rum-xsm']:hover{
+    .scale(-3*@size-step);
+  }
+  [class*='@{down}']:hover svg[class*='rum-sm'],
+  svg[class*='@{down}'][class*='rum-sm']:hover{
+    .scale(-2*@size-step);
+  }
+  [class*='@{down}']:hover svg,
+  svg[class*='@{down}']:hover,
+  [class*='@{up}']:hover svg[class*='rum-xsm'],
+  svg.@{up}[class*='rum-xsm']:hover{
+    .scale(-1*@size-step);
+  }
+  [class*='@{down}']:hover svg[class*='rum-lg'],
+  svg[class*='@{down}'][class*='rum-lg']:hover,
+  [class*='@{up}']:hover svgElement[class*='rum-sm'],
+  svg[class*='@{up}'][class*='rum-sm']:hover{
+    .scale(0);
+  }
+  [class*='@{down}']:hover svg[class*='rum-xlg'],
+  svg[class*='@{down}'][class*='rum-xlg']:hover,
+  [class*='@{up}']:hover svg,
+  svg[class*='@{up}']:hover{
+    .scale(1*@size-step);
+  }
+  [class*='@{up}']:hover svg[class*='rum-lg'],
+  svg[class*='@{up}'][class*='rum-lg']:hover{
+    .scale(2*@size-step);
+  }
+  [class*='@{up}']:hover svg[class*='rum-xlg'],
+  svg[class*='@{up}'][class*='rum-xlg']:hover{
+    .scale(3*@size-step);
+  }
