@@ -18,4 +18,4 @@ It is a small plugin that simplies the use of svg as icons. Simply create a <i>s
 <li>class <i>hover-raise-up</i> defines action on mouse over. There are other actions which are still undocumented.</li>
 <li>On changing data-id dynamically, naturally icon also changes.</li>
 </ul>
-<b>Demo : </b> http://kiwicons.com
+<b>Demo & documentation : </b> http://kiwicons.com
